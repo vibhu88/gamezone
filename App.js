@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 import Home from './screens/home';
+import Navigator from './routes/drawer';
 
 //Font Registration
 const getFonts = () => Font.loadAsync({
@@ -13,7 +14,7 @@ export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
   if (fontsLoaded){
     return (
-      <Home />
+      <Navigator />
     );
   } else {
     return (
